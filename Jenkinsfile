@@ -3,7 +3,7 @@ agent any
 stages{
 stage('scm checkout'){
 steps{
-git url: "https://github.com/mano8888/concentrix.git"
+sh "git url: https://github.com/mano8888/concentrix.git"
 }
 }
 stage('build'){
