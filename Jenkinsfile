@@ -3,22 +3,22 @@ agent any
 stages{
 stage('scm checkout'){
 steps{
-sh "git url: https://github.com/mano8888/concentrix.git"
+sh "git clone https://github.com/mano8888/concentrix.git"
 }
 }
 stage('build'){
 steps{
-sh "mvn clean"
+sh "mvn clean -f concentrix"
 }
 }
 stage('test'){
 steps{
-sh "mvn test"
+sh "mvn test -f concentrix"
 }
 }
 stage('deploy'){
 steps{
-sh "mvn deploy"
+sh "mvn deploy -f concentrix"
 }
 }
 }
