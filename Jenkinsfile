@@ -18,7 +18,7 @@ sh "mvn test -f concentrix"
 }
 stage('deploy'){
 steps{
-sh "mvn deploy -f concentrix"
+sh "mvn package -f concentrix"
 }
 }
 }
