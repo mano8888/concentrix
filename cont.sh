@@ -1,11 +1,11 @@
-manoj=$1
+manu=$1
 
-echo "creating $manoj containers"
+echo "con containaers has been created"
 sleep 2;
 
-for i in `seq $manoj`
+for i in `seq $manu`
 do
-	echo "creating www.com$i containers"
+	echo "con containers www.com$i containers are created"
 	sudo docker run -it --name www.com$i mano8888/concentrix /bin/bash
 	sleep 1;
 	echo "www.com$i containers has been created"
